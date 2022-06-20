@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
-
+import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
+import Calendar from "./component/Calendar/Calendar";
+import Capabilities from "./component/Capabilities";
+import Task from "./component/Task";
+import Project from "./component/Project";
+import Auth from "./page/Auth";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       <BrowserRouter>
+          <Routes>
+             <Route path="/" element={<Navigate to="/login"/> } />
+             <Route path="/login" element={<Auth />} />
+             <Route path="/projects" element={<Project />} />
+             <Route path="/date" element={<Calendar />} />
+             <Route path="/capabilities" element={<Capabilities />} />
+             <Route path="/task" element={<Task />} />
+          </Routes>
+       </BrowserRouter>
     </div>
   );
 }
-
 export default App;
