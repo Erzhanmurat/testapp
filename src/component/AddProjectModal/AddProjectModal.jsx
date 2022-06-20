@@ -40,15 +40,12 @@ const AddProjectModal = ({users, setUsers, setOpenModal}) => {
       },
    });
    return (
-     <div className="bg-white">
-        <div className="py-9 mx-auto bg-white fixed justify-center flex w-full">
+        <div className="py-9 bg-white fixed justify-center flex w-full">
            <div>
-              <div className='absolute right-1/3' onClick={() => {
+              <div className='absolute sm:right-1/3 right-1/4' onClick={() => {
                  setOpenModal(false)
               }}>
-                 <button className='text-2xl'>
-                    <FontAwesomeIcon icon={faXmark}/>
-                 </button>
+                    <FontAwesomeIcon icon={faXmark} className='text-2xl hover:cursor-pointer'/>
               </div>
            </div>
            <form onSubmit={formik.handleSubmit} className="p-16 rounded-lg shadow-inner bg-slate-300">
@@ -129,7 +126,6 @@ const AddProjectModal = ({users, setUsers, setOpenModal}) => {
               </button>
            </form>
         </div>
-     </div>
    );
 };
 
