@@ -19,7 +19,7 @@ const Dashboard = (users, setUsers) => {
            openModal &&
            <AddProjectModal setOpenModal={setOpenModal}/>
         }
-        <div className="container m-auto flex">
+        <div className="m-auto flex">
            <div className="w-3/12 bg-violet-700 d-inline">
               <div className="mt-12 text-white">
                  <Link to="/task">

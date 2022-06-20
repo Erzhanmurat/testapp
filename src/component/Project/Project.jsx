@@ -28,7 +28,7 @@ const Project = () => {
            openModal &&
            <AddProjectModal setOpenModal={setOpenModal} users={users} setUsers={setUsers}/>
         }
-        <div className="container m-auto flex">
+        <div className="m-auto flex">
            <div className="w-3/12 bg-violet-700 d-inline">
               <div className="mt-12 text-white">
                  <Link to="/task">
@@ -68,7 +68,7 @@ const Project = () => {
                  <hr className="h-1 bg-neutral-300 mb-4"/>
                  <div className="flex justify-between mb-3">
                     <h2 className="uppercase items-end">список проектов</h2>
-                    <button onClick={() => setOpenModal(true)} className="p-2 bg-fuchsia-500 hover:bg-fuchsia-600">Добавить проект</button>
+                    <button onClick={() => setOpenModal(true)} className="p-2 bg-fuchsia-500 hover:bg-fuchsia-600 mr-2">Добавить проект</button>
                  </div>
                  <div className="text-end text-xl">
                     <button className="text-gray-500 hover:text-violet-500 active:bg-gray-700 p-2"><FontAwesomeIcon icon={faTableList}/></button>
@@ -79,7 +79,7 @@ const Project = () => {
                        users.map((user) => (
                          <div key={user.id} className="flex w-1/3 p-5 flex-wrap box-border shadow-2xl">
                             <div>
-                               <img src={user.image} alt=""/>
+                               <img className="aspect-video w-96  object-cover object-center" src={user.image} alt=""/>
                                <div className="mb-1">
                                   <h2 className="text-md">{user.title}</h2>
                                </div>

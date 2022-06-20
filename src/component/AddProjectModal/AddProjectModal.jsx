@@ -40,17 +40,17 @@ const AddProjectModal = ({users, setUsers, setOpenModal}) => {
       },
    });
    return (
-     <div className="bg-white h-screen">
-        <div className='p-6 mt-20'>
-           <div className='absolute right-1/4 top-6' onClick={() => {
-              setOpenModal(false)
-           }}>
-              <button className='text-2xl'>
-                 <FontAwesomeIcon icon={faXmark}/>
-              </button>
+     <div className="bg-white">
+        <div className="py-9 mx-auto bg-white fixed justify-center flex w-full">
+           <div>
+              <div className='absolute right-1/3' onClick={() => {
+                 setOpenModal(false)
+              }}>
+                 <button className='text-2xl'>
+                    <FontAwesomeIcon icon={faXmark}/>
+                 </button>
+              </div>
            </div>
-        </div>
-        <div className="mx-auto bg-white fixed justify-center flex w-full">
            <form onSubmit={formik.handleSubmit} className="p-16 rounded-lg shadow-inner bg-slate-300">
               <div className="mb-6">
                  <label htmlFor="title" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-600">Название Проекта</label>
@@ -61,7 +61,7 @@ const AddProjectModal = ({users, setUsers, setOpenModal}) => {
                         value={formik.values.title}
                         className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                         placeholder="Заполнить заголовок"/>
-                 {formik.errors.title ? <div className="text-red-400">{formik.errors.title}</div> : null}
+                 {formik.errors.title ? <div className="text-red-400 text-sm">{formik.errors.title}</div> : null}
               </div>
               <div className="grid gap-6 mb-6 lg:grid-cols-2">
                  <div>
@@ -74,7 +74,7 @@ const AddProjectModal = ({users, setUsers, setOpenModal}) => {
                            value={formik.values.manager}
                            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                            placeholder="Руководитель"/>
-                    {formik.errors.manager ? <div className="text-red-400">{formik.errors.manager}</div> : null}
+                    {formik.errors.manager ? <div className="text-red-400 text-sm">{formik.errors.manager}</div> : null}
                  </div>
                  <div>
                     <label htmlFor="administrator" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-600">Администратор проекта</label>
@@ -85,7 +85,7 @@ const AddProjectModal = ({users, setUsers, setOpenModal}) => {
                            value={formik.values.administrator}
                            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                            placeholder="Администратор"/>
-                    {formik.errors.administrator ? <div className="text-red-400">{formik.errors.administrator}</div> : null}
+                    {formik.errors.administrator ? <div className="text-red-400 text-sm">{formik.errors.administrator}</div> : null}
                  </div>
                  <div>
                     <label htmlFor="dateStart"
@@ -97,7 +97,7 @@ const AddProjectModal = ({users, setUsers, setOpenModal}) => {
                            value={formik.values.dateStart}
                            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                            placeholder=""/>
-                    {formik.errors.dateStart ? <div className="text-red-400">{formik.errors.dateStart}</div> : null}
+                    {formik.errors.dateStart ? <div className="text-red-400 text-sm">{formik.errors.dateStart}</div> : null}
                  </div>
                  <div>
                     <label htmlFor="date"
@@ -109,7 +109,7 @@ const AddProjectModal = ({users, setUsers, setOpenModal}) => {
                            value={formik.values.dateEnd}
                            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                            placeholder=""/>
-                    {formik.errors.dateEnd ? <div className="text-red-400">{formik.errors.dateEnd}</div> : null}
+                    {formik.errors.dateEnd ? <div className="text-red-400 text-sm">{formik.errors.dateEnd}</div> : null}
                  </div>
               </div>
               <div className="mb-6">
@@ -121,7 +121,7 @@ const AddProjectModal = ({users, setUsers, setOpenModal}) => {
                         value={formik.values.image}
                         className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                         placeholder="http://url/images"/>
-                 {formik.errors.image ? <div className="text-red-400">{formik.errors.image}</div> : null}
+                 {formik.errors.image ? <div className="text-red-400 text-sm">{formik.errors.image}</div> : null}
               </div>
               <button type="submit"
                       className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
