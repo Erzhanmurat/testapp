@@ -6,7 +6,7 @@ import {faTable} from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 import AddProjectModal from "../../component/AddProjectModal";
 
-const Dashboard = (users, setUsers) => {
+const Layout = (users, setUsers) => {
    const [openModal, setOpenModal] = useState(false)
 
    useEffect(() => {
@@ -69,4 +69,4 @@ const Dashboard = (users, setUsers) => {
    );
 };
 
-export default Dashboard;
+export default Layout;

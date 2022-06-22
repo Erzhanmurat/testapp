@@ -1,11 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import AddProjectModal from "../AddProjectModal";
-import {Link} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBars, faCalendarDays, faRubleSign, faTable, faTableList, faUser} from "@fortawesome/free-solid-svg-icons";
 import Header from "../Header";
 import axios from "axios";
 import Spinner from "../Spinner";
+import logo from "../../assets/images/logo.png"
 
 const Project = () => {
    const [openModal, setOpenModal] = useState(false)
@@ -28,34 +29,17 @@ const Project = () => {
            openModal &&
            <AddProjectModal setOpenModal={setOpenModal} users={users} setUsers={setUsers}/>
         }
-        <div className="m-auto flex">
+        <div className="flex min-h-screen">
            <div className="w-3/12 bg-violet-700 d-inline">
-              <div className="mt-12 text-white">
-                 <Link to="/task">
-                    <div className="text-xl hover:bg-violet-900 p-2">
-                       <FontAwesomeIcon icon={faTable} beat/>
-                       <span className="ml-3">Задачи и работы</span>
-                    </div>
-                 </Link>
-                 <Link to="/projects">
-                    <div className="text-xl hover:bg-violet-900 p-2 active">
-                       <FontAwesomeIcon icon={faTable} beat/>
-                       <span  className="ml-3">Проекты</span>
-                    </div>
-                 </Link>
-                 <Link to="/date">
-                    <div className="text-xl hover:bg-violet-900 p-2">
-                       <FontAwesomeIcon icon={faTable} beat/>
-                       <span  className="ml-3">Календарь</span>
-                    </div>
-                 </Link>
-                 <Link to="/capabilities">
-                    <div className="text-xl hover:bg-violet-900 p-2">
-                       <FontAwesomeIcon icon={faTable} beat/>
-                       <span className="ml-3">Возможности</span>
-                    </div>
-                 </Link>
-              </div>
+              <aside className="py-4">
+                 <img className="h-24 block m-auto mb-8" src={logo} alt="logo"/>
+                 <nav className='navbar'>
+                    <NavLink to="/task" className="block text-xl py-2 text-white"><FontAwesomeIcon icon={faTable} beat/><span className="ml-3">Задачи и работы</span></NavLink>
+                    <NavLink to="/projects" className="block text-xl py-2 text-white"><FontAwesomeIcon icon={faTable} beat/><span className="ml-3">Проекты</span></NavLink>
+                    <NavLink to="/date" className="block text-xl py-2 text-white"><FontAwesomeIcon icon={faTable} beat/><span className="ml-3">Календарь</span></NavLink>
+                    <NavLink to="/capabilities" className="block text-xl py-2 text-white"><FontAwesomeIcon icon={faTable} beat/><span className="ml-3">Возможности</span></NavLink>
+                 </nav>
+              </aside>
            </div>
            <div className="w-9/12">
               <Header/>
