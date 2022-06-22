@@ -32,12 +32,12 @@ const Project = () => {
         </div>
         <hr className="h-1 bg-neutral-300 mb-4"/>
         <div className="flex justify-between mb-3">
-           <h2 className="uppercase items-end">список проектов</h2>
-           <button onClick={() => setOpenModal(true)} className="p-2 bg-fuchsia-500 hover:bg-fuchsia-600">Добавить проект</button>
+           <h2 className="uppercase items-end font-medium text-gray-500">список проектов</h2>
+           <button onClick={() => setOpenModal(true)} className="p-2 bg-fuchsia-500 hover:bg-fuchsia-600 hover:text-white">Добавить проект</button>
         </div>
         <div className="text-end text-xl">
-           <button className="text-gray-500 hover:text-violet-500 active:bg-gray-700 mr-2"><FontAwesomeIcon icon={faTableList}/></button>
-           <button className="text-gray-500 hover:text-violet-500 active:bg-gray-700 mr-2"><FontAwesomeIcon icon={faBars}/></button>
+           <button className="text-gray-500 hover:text-violet-500 active:bg-gray-500 mr-2"><FontAwesomeIcon icon={faTableList}/></button>
+           <button className="text-gray-500 hover:text-violet-500 active:bg-gray-500 mr-2"><FontAwesomeIcon icon={faBars}/></button>
         </div>
         <div className="flex flex-wrap">
            {
