@@ -6,10 +6,10 @@ const Layout = ({children}) => {
    return (
      <>
         <div className="flex min-h-screen">
-           <div className="w-3/12 bg-violet-700 d-inline">
+           <div className="columns-xs bg-violet-900 d-inline">
               <Sidebar />
            </div>
-           <div className="w-9/12">
+           <div className="w-full">
               <Header/>
               <div className="p-4">
                  {children}
