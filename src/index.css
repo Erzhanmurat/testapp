@@ -3,12 +3,18 @@
 @tailwind utilities;
 
 
-.active{
-    color: white;
-    background: #471593;
-    cursor: pointer;
+.navbar .active{
+    position: relative;
+    background-color: #3e1081;
+}
+
+.navbar .active:before {
     content: "";
-    border-left: 6px solid white;
-    border-radius: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 5px;
+    height: 100%;
+    background-color: #ea03ea;
 }
 

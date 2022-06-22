@@ -40,7 +40,7 @@ const AddProjectModal = ({users, setUsers, setOpenModal}) => {
       },
    });
    return (
-        <div className="py-9 bg-white fixed justify-center flex w-full">
+        <div className="bg-white fixed justify-center flex w-full">
            <div>
               <div className='absolute sm:right-1/3 right-1/4' onClick={() => {
                  setOpenModal(false)
