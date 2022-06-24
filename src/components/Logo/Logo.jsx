@@ -4,7 +4,7 @@ import logo from "../../assets/images/logo.png";
 const Logo = () => {
    return (
      <>
-        <img className="h-16 block m-auto mb-8" src={logo} alt="logo"/>
+        <img className="h-24 block m-auto" src={logo} alt="logo"/>
      </>
    );
 };
