@@ -7,7 +7,7 @@ const Layout = ({children}) => {
      <>
         <div className="flex min-h-screen">
            <div className="columns-xs bg-violet-900 d-inline">
-              <Sidebar />
+              <Sidebar/>
            </div>
            <div className="w-full">
               <Header/>

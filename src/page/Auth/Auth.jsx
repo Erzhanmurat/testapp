@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import {Link, useNavigate} from "react-router-dom";
-import { ToastContainer, toast } from 'react-toastify';
+import {ToastContainer, toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
 const Auth = () => {
    let navigate = useNavigate()
    const [login, setLogin] = useState("")
@@ -12,7 +13,8 @@ const Auth = () => {
    const handleChangePassword = (e) => {
       setPassword(e.target.value);
    };
-   function handleSubmit () {
+
+   function handleSubmit() {
       if (login === "admin" && password === "admin") {
          navigate("/projects");
       } else {
@@ -21,6 +23,7 @@ const Auth = () => {
          toast.warn("Вы ввели неверные данные");
       }
    }
+
    return (
      <>
         <div className="bg-gray-200 rounded py-16 px-12 m-16 flex flex-col items-center justify-center">
@@ -30,20 +33,20 @@ const Auth = () => {
               <div className="mb-4">
                  <label htmlFor="login" className="sr-only">login</label>
                  <input
-                        onChange={handleChangeLogin}
-                        value={login}
-                        name="login"
-                        className="border-solid border border-gray-400 rounded px-2 py-3"
-                        type="login"
-                        id="login"
-                        placeholder="Login"/>
+                   onChange={handleChangeLogin}
+                   value={login}
+                   name="login"
+                   className="border-solid border border-gray-400 rounded px-2 py-3"
+                   type="login"
+                   id="login"
+                   placeholder="Login"/>
               </div>
               <div>
                  <label htmlFor="password" className="sr-only">Password</label>
-                 <input  onChange={handleChangePassword}
-                         value={password}
-                         name="password"
-                         className="border-solid border border-gray-400 rounded px-2 py-3"
+                 <input onChange={handleChangePassword}
+                        value={password}
+                        name="password"
+                        className="border-solid border border-gray-400 rounded px-2 py-3"
                         type="password"
                         id="password"
                         placeholder="Password"/>
