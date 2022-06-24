@@ -1,7 +1,7 @@
 import React from 'react';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBars, faTableList} from "@fortawesome/free-solid-svg-icons";
-import Layout from "../../component/Layout";
+import Layout from "../../components/Layout";
 
 
 const Calendar = () => {

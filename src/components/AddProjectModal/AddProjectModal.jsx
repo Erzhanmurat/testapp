@@ -42,7 +42,7 @@ const AddProjectModal = ({users, setUsers, setOpenModal}) => {
       },
    });
    return (
-        <div className="fixed justify-center flex w-full min-h-screen bg-white p-6 top-0 right-0 left-0 bottom-0 m-0-auto overflow-x-scroll">
+        <div className="fixed justify-center flex w-full min-h-screen bg-white p-6 top-0 right-0 left-0 bottom-0 m-0-auto overflow-x-scroll z-50">
               <form onSubmit={formik.handleSubmit} className="">
                  <div className='text-right' onClick={() => {
                     setOpenModal(false)

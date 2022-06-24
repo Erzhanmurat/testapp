@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBars, faRubleSign, faTableList,} from "@fortawesome/free-solid-svg-icons";
-import Layout from "../../component/Layout";
-import AddProjectModal from "../../component/AddProjectModal";
+import Layout from "../../components/Layout";
+import AddProjectModal from "../../components/AddProjectModal";
 import {faCalendar, faUser} from "@fortawesome/free-regular-svg-icons";
 import axios from "axios";
 
